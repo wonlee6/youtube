@@ -6,6 +6,23 @@ import styles from "./App.module.css";
 const App = () => {
   const [videos, setVideos] = useState([]);
 
+  const search = (query) => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=AIzaSyCnl-WV_Uf54AlLXIRTa1AibphFX09RfVE`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) =>
+        result.items.map((item) => ({ ...item, id: item.id.videoId }))
+      )
+      .then((items) => setVideos(items))
+      .catch((error) => console.log("error", error));
+  };
   useEffect(() => {
     var requestOptions = {
       method: "GET",
@@ -13,7 +30,7 @@ const App = () => {
     };
 
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?key=AIzaSyCnl-WV_Uf54AlLXIRTa1AibphFX09RfVE&part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyCnl-WV_Uf54AlLXIRTa1AibphFX09RfVE",
+      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyCnl-WV_Uf54AlLXIRTa1AibphFX09RfVE",
       requestOptions
     )
       .then((response) => response.json())
@@ -23,7 +40,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <SearchHeader />
+      <SearchHeader onSearch={search} />
       <VideoList videos={videos} />;
     </div>
   );
