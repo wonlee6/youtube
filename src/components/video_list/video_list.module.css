@@ -1,0 +1,7 @@
+.video {
+  display: flex;
+  /* 아이템의 크기에 맞게 내려갈수 있도록 */
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
