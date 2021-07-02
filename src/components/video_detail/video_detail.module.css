@@ -1,0 +1,8 @@
+.detail {
+  padding: 0.2em;
+}
+
+.description {
+  /* text가 길게 이어질 때 설정 (pre 태그) */
+  white-space: pre-wrap;
+}
