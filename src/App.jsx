@@ -7,8 +7,11 @@ import VideoDetail from "./components/video_detail/video_detail";
 const App = ({ youtube }) => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
+  const selectVideo = (video) => {
+    setSelectedVideo(video);
+  };
   const search = (query) => {
+    setSelectedVideo(null);
     youtube
       .search(query) //
       .then((videos) => setVideos(videos));
@@ -19,9 +22,6 @@ const App = ({ youtube }) => {
       .then((videos) => setVideos(videos));
   }, []);
 
-  const selectVideo = (video) => {
-    setSelectedVideo(video);
-  };
   return (
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
@@ -38,7 +38,6 @@ const App = ({ youtube }) => {
             onVideoClick={selectVideo}
             display={selectedVideo ? "list" : "grid"}
           />
-          ;
         </div>
       </section>
     </div>
