@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   height: 3rem;
+  /* width: 100%; */
   padding: 0.5rem 0;
-
   background-color: white;
   color: black;
   position: sticky;
@@ -14,7 +14,7 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 1em;
+  margin-left: 3em;
 }
 .img {
   margin-right: 5px;

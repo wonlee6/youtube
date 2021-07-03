@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  border: 1px solid red;
+  width: 15%;
+}
+.container ul {
+  list-style: none;
+}
+.sideName {
+}

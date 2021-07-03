@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
-import SearchHeader from "./components/search_header/search_header";
-import VideoList from "./components/video_list/video_list";
-import styles from "./App.module.css";
-import VideoDetail from "./components/video_detail/video_detail";
+import React, { useCallback, useEffect, useState } from 'react';
+import SearchHeader from './components/search_header/search_header';
+import VideoList from './components/video_list/video_list';
+import styles from './App.module.css';
+import VideoDetail from './components/video_detail/video_detail';
+import SideMenu from './components/side_menu/side_menu';
 
 const App = ({ youtube }) => {
   const [videos, setVideos] = useState([]);
@@ -30,6 +31,7 @@ const App = ({ youtube }) => {
     <div className={styles.app}>
       <SearchHeader onSearch={search} />
       <section className={styles.content}>
+        <SideMenu />
         {/* selectedVideo 가 있으면 videoDetail 컴포넌트에 전달 */}
         {selectedVideo && (
           <div className={styles.detail}>
@@ -40,7 +42,7 @@ const App = ({ youtube }) => {
           <VideoList
             videos={videos}
             onVideoClick={selectVideo}
-            display={selectedVideo ? "list" : "grid"}
+            display={selectedVideo ? 'list' : 'grid'}
           />
         </div>
       </section>
