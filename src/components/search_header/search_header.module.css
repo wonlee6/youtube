@@ -1,9 +1,14 @@
 .header {
   display: flex;
-  height: 4rem;
-  padding: 0.5rem 1em;
-  background-color: black;
-  color: white;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 0.5rem 0;
+
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .logo {
@@ -11,23 +16,67 @@
   align-items: center;
   margin-right: 1em;
 }
-
+.img {
+  margin-right: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+.title {
+  font-size: 1.2em;
+}
+.center {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
 .input {
   /* 너백 가득 차게 */
   flex-basis: 100%;
   font-size: 1.2rem;
-  outline: 0;
+  width: 70%;
+  height: 100%;
+  border: 0.5px solid gray;
+  padding: 5px;
 }
 
 .button {
-  background-color: darkgray;
-  outline: 0;
+  width: 100px;
+  height: 100%;
+  background-color: white;
+  cursor: pointer;
+  border: 0.5px solid gray;
+}
+.button:hover {
+  background-color: #e9e9e9;
+}
+.button:hover > .buttonImg {
+  color: #333333;
 }
 
 .buttonImg {
-  padding: 0.5em 0.2em;
+  /* padding: 0.5em 0.2em; */
   height: 100%;
+  color: lightgray;
+}
+
+.micDiv {
+  width: 30px;
+  height: 40px;
+  padding: 8px;
+  color: gray;
   cursor: pointer;
 }
-.buttonImg:hover {
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons p {
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  margin-left: 15px;
+  cursor: pointer;
 }
