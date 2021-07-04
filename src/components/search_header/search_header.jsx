@@ -27,9 +27,13 @@ const SearchHeader = memo(({ onSearch }) => {
       handleSearch();
     }
   };
+
+  const moveHome = () => {
+    document.location.href = '/';
+  };
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={moveHome}>
         <img className={styles.img} src='/images/logo.png' alt='logo' />
         <h1 className={styles.title}>YouTube</h1>
       </div>

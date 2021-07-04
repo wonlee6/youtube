@@ -1,10 +1,44 @@
 .container {
   display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 15%;
+  flex-direction: column;
 }
 .container ul {
   list-style: none;
+  text-align: center;
+  padding: 15px;
 }
-.sideName {
+.container ul li {
+  margin: 10px 0;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.iconCover {
+  display: flex;
+  line-height: 24px;
+}
+
+.iconCover h3 {
+  margin: 10px 0 0 10px;
+  font-weight: 200;
+}
+.icons {
+  flex: 1 1 30%;
+}
+.sideText {
+  flex: 1 1 70%;
+}
+
+.sideText p {
+  text-align: left;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.sideIcons {
+  color: #606060;
 }

@@ -13,6 +13,7 @@ class Youtube {
         part: 'snippet',
         chart: 'mostPopular',
         maxResults: 25,
+        regionCode: 'kr',
       },
     });
     return response.data.items;
