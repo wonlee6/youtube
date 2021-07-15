@@ -67,3 +67,11 @@ const App = ({ youtube }) => {
 ### 반응형 화면
 
 ![react](/images/5.png)
+
+### youtube api
+
+![youtube](/images/6.png)
+
+### postman 사용
+
+![postman](/images/7.png)
