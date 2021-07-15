@@ -42,3 +42,8 @@
 .sideIcons {
   color: #606060;
 }
+@media screen and (max-width: 48rem) {
+  .container {
+    display: none;
+  }
+}
