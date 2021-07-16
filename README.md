@@ -1,5 +1,7 @@
 # React로 youtube clone
 
+[homepage](https://wonlee6.github.io/youtube/)
+
 > 기술 스택 - React, Rest API(fetch, axios), postman
 
 ### 이번 프로젝트의 주 목적은 **API 요청을 하여 데이터를 가져오는 작업 수행**
